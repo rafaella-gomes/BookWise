@@ -27,6 +27,11 @@ export const LoginContainer = styled('div', {
   position: 'relative',
   borderRadius: '$md',
   margin: '$2',
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    maxWidth: 340,
+    padding: '$8 $8',
+  },
 })
 
 export const LoginHead = styled('div', {

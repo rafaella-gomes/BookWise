@@ -5,6 +5,11 @@ export const RightContainerProfile = styled('div', {
   flex: '1',
   marginLeft: '$8',
   borderLeft: '1px solid $gray700',
+
+  '@media screen and (min-width: 360px) and (max-width: 768px)': {
+    marginLeft: 0,
+    marginRight: '$1',
+  },
 })
 
 export const UserContainer = styled('div', {
@@ -57,6 +62,10 @@ export const NavigationImagesContainer = styled('div', {
   alignItems: 'center',
   gap: '3.2rem',
   height: '100%',
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    gap: '5.5rem',
+  },
 })
 
 export const NavigationImageContainer = styled('div', {
@@ -75,8 +84,11 @@ export const NavigationImageContainer = styled('div', {
 export const NavigationInfosContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-
   gap: '$10',
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    gap: '$12',
+  },
 })
 
 export const Infos = styled('div', {

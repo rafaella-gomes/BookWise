@@ -39,6 +39,13 @@ export const CardContainer = styled('div', {
     Page: {
       Explore: {
         minHeight: 168,
+        overflow: 'hidden',
+
+        '@media screen and (min-width: 360px) and (max-width: 767px)': {
+          maxWidth: 242,
+          maxHeight: 168,
+          marginRight: '$2',
+        },
       },
       Default: {},
     },

@@ -94,7 +94,15 @@ export const BookImage = styled('div', {
   display: 'flex',
   marginRight: '$5',
   borderRadius: 8,
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    img: {
+      width: 78,
+      height: 112,
+    },
+  },
 })
+
 export const BookDetails = styled('div', {
   display: 'flex',
   flexDirection: 'column',
@@ -111,6 +119,14 @@ export const BookName = styled('span', {
   fontSize: '$md',
   lineHeight: '$short',
   color: '$gray100',
+
+  '@media screen and (min-width: 360px) and (max-width: 768px)': {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: 2,
+  },
 })
 
 export const BookAuthor = styled('span', {
@@ -141,5 +157,12 @@ export const DescriptionText = styled('span', {
     textDecoration: 'none',
     cursor: 'pointer',
     color: '$purple100',
+  },
+
+  '@media screen and (min-width: 360px) and (max-width: 768px)': {
+    display: '-webkit-box',
+    maxHeight: '4rem',
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: 'vertical',
   },
 })

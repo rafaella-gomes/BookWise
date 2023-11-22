@@ -133,9 +133,9 @@ export const LoginButton = styled('div', {
     textDecoration: 'none',
   },
 
-  '@media screen and (min-width: 360px) and (max-width: 760px) ': {
+  '@media screen and (min-width: 360px) and (max-width: 767px) ': {
     '& button, & a': {
-      minWidth: 332,
+      minWidth: 300,
       fontSize: '$md',
     },
   },

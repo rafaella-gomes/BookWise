@@ -50,6 +50,11 @@ export const ModalContent = styled(Dialog.Content, {
     color: '$gray100',
     marginBottom: '2rem',
   },
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    minWidth: '100vw',
+    maxWidth: '100vw',
+  },
 })
 
 export const ModalClose = styled(Dialog.Close, {
@@ -72,10 +77,19 @@ export const BookContainer = styled('div', {
   background: '$gray700',
   borderRadius: 10,
   maxWidth: 564,
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    flexDirection: 'column',
+    gap: '$5',
+  },
 })
 export const BookDetail = styled('div', {
   display: 'flex',
   gap: '$8',
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    flexDirection: 'column',
+    gap: '$5',
+  },
 })
 
 export const BookImage = styled('div', {
@@ -83,6 +97,11 @@ export const BookImage = styled('div', {
   marginRight: '$5',
   borderRadius: 8,
   border: '1px solid $gradient-vertical',
+
+  img: {
+    width: 122,
+    height: 172,
+  },
 })
 export const BookInfo = styled('div', {
   display: 'flex',
@@ -133,12 +152,18 @@ export const BookAuthor = styled('span', {
 export const BookAboutContainer = styled('div', {
   display: 'flex',
   padding: '$6 0',
-  alignItems: 'center',
+
   justifyContent: 'center',
   gap: '$10',
   background: '$gray700',
   width: ' 100%',
   borderTop: '1px solid $gray600',
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    flexDirection: 'column',
+    gap: '$5',
+  },
+  '@media screen and (min-width: 768px)': { alignItems: 'center' },
 })
 
 export const BookAbout = styled('div', {
@@ -185,6 +210,9 @@ export const AboutTitle = styled('span', {
 export const AboutDiv = styled('div', {
   display: 'flex',
   gap: '$1',
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    flexDirection: 'column',
+  },
 })
 export const AboutDetail = styled('span', {
   fontWeight: '$bold',

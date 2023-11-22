@@ -17,7 +17,7 @@ import { GetServerSideProps } from 'next'
 import { authOptions } from '../api/auth/[...nextauth].api'
 import { prisma } from '@/lib/prisma'
 import { Book, Category, Rating, User } from '@prisma/client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useSearchParams } from 'next/navigation'
 import { api } from '@/lib/axios'
@@ -56,16 +56,22 @@ export default function Explore({ session, categories, books }: ExplorePage) {
 
   const [searchQuery, setSearchQuery] = useState('')
 
-  const specificCategories = [
+  const [specificCategories, setSpecificCategories] = useState([
     'Tudo',
     'Programação',
     'Educação',
-    'Fantasia',
-    'Ficção científica',
     'Terror',
-    'HQs',
     'Suspense',
-  ]
+  ])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const width = window.innerWidth
+      if (width < 767) {
+        setSpecificCategories(['Tudo', 'Programação', 'Educação', 'Terror'])
+      }
+    }
+  }, [])
 
   function filterBook(categoryId: string) {
     const category = categories.find((category) => category.id === categoryId)
@@ -109,6 +115,7 @@ export default function Explore({ session, categories, books }: ExplorePage) {
     }
   }
 
+  console.log({ specificCategories })
   return (
     <PageContainer>
       <SideBar session={session} />

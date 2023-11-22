@@ -16,7 +16,7 @@ export const SideBarContainer = styled('div', {
       true: {
         display: 'flex',
 
-        '@media screen and (min-width: 360px) and (max-width: 1200px)': {
+        '@media screen and (min-width: 360px) and (max-width: 1199px)': {
           zIndex: 1000,
           position: 'absolute',
           top: '$13',

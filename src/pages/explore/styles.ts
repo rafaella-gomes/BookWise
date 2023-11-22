@@ -19,10 +19,15 @@ export const Input = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  marginRight: '$6',
 
   svg: {
     marginLeft: '-2rem',
     color: '$gray500',
+  },
+
+  '@media screen and (min-width: 360px) and (max-width: 768px)': {
+    marginLeft: '$5',
   },
 })
 
@@ -54,9 +59,10 @@ export const Categories = styled('div', {
   fontSize: '$md',
   fontWeight: '$regular',
   lineHeight: '$base',
-  gap: '$2',
+  gap: '$2',  
   alignItems: 'center',
   marginBottom: '$5',
+  minWidth: 'max-content',
 })
 
 export const Tag = styled('button', {
@@ -91,6 +97,9 @@ export const RowofBooks = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(3,1fr)',
   gap: '$3',
+  '@media screen and (min-width: 360px) and (max-width: 1199px)': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
 })
 
 export const PlainButton = styled('button', {

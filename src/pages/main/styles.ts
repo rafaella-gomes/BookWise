@@ -42,6 +42,12 @@ export const Header = styled('div', {
 
 export const Container = styled('div', {
   display: 'flex',
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 })
 
 export const FeedsContainer = styled('div', {
@@ -50,6 +56,11 @@ export const FeedsContainer = styled('div', {
   flex: '2',
   marginRight: '$8',
   gap: '$6',
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    marginRight: 0,
+    marginBottom: '$3',
+  },
 })
 
 export const FeedofLastReads = styled('div', {
@@ -103,6 +114,11 @@ export const ListOfComments = styled('div', {
 export const RightContainer = styled('div', {
   flex: '1',
   marginLeft: '$8',
+
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    marginLeft: 0,
+    marginTop: '$4',
+  },
 })
 
 export const HeaderContainer = styled('div', {

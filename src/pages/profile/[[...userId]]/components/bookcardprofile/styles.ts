@@ -10,6 +10,7 @@ export const CardContainerProfile = styled('div', {
   alignItems: 'center',
   gap: '$6',
   maxWidth: '100%',
+  minWidth: '20rem',
 })
 
 export const ContainerProfile = styled('div', {

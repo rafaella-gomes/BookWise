@@ -46,6 +46,12 @@ export const BookImageMain = styled('div', {
 
   marginRight: '$5',
   borderRadius: 8,
+  '@media screen and (min-width: 360px) and (max-width: 767px)': {
+    img: {
+      width: 78,
+      height: 112,
+    },
+  },
 })
 
 export const RatingMain = styled('div', {
@@ -55,8 +61,20 @@ export const RatingMain = styled('div', {
 export const BookSummary = styled('div', {
   display: 'flex',
   marginTop: '$6',
-  color: '$gray300',
-  fontWeight: '$regular',
-  fontSize: '$sm',
-  lineHeight: '$base',
+
+  span: {
+    color: '$gray300',
+    fontWeight: '$regular',
+    fontSize: '$sm',
+    lineHeight: '$base',
+  },
+  '@media screen and (min-width: 360px) and (max-width: 768px)': {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    display: '-webkit-box',
+    maxHeight: '5rem',
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: 'vertical',
+    marginTop: '$2',
+  },
 })
